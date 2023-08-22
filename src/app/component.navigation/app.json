@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.navigation",
+    "title": "navigation",
+    "namespace": "navigation",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.navigation",
+        "name": "ComponentNavigationComponent",
+        "path": "./component.navigation/component.navigation.component"
+    },
+    "ng": {
+        "selector": "wiz-component-navigation",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-navigation()"
+}

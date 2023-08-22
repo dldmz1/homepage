@@ -1,0 +1,19 @@
+body {
+    width: 100%;
+}
+
+.wiz-page {
+    max-width: 1760px;
+    width: 90vw;
+    margin: 0px auto;
+}
+
+.wiz-view {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.wiz-view::-webkit-scrollbar {
+    display: none;
+}

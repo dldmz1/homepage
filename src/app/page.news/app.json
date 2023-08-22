@@ -1,0 +1,22 @@
+{
+    "mode": "page",
+    "id": "page.news",
+    "title": "/news",
+    "namespace": "news",
+    "viewuri": "/news",
+    "category": "",
+    "layout": "layout.season",
+    "ng.build": {
+        "id": "page.news",
+        "name": "PageNewsComponent",
+        "path": "./page.news/page.news.component"
+    },
+    "ng": {
+        "selector": "wiz-page-news",
+        "inputs": [
+            "title"
+        ],
+        "outputs": []
+    },
+    "template": "wiz-page-news([title]=\"\")"
+}

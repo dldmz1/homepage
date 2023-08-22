@@ -1,0 +1,86 @@
+.content {
+    margin-top: -50px;
+    background-color: black;
+    padding: 60px 140px;
+    color: white;
+    height: auto;
+
+    h1 {
+        font: normal normal bold 60px/72px Montserrat;
+
+        @media(max-width: 1538px) {
+            font: normal normal bold 50px/62px Montserrat;
+        }
+
+        @media(max-width: 1334px) {
+            font: normal normal bold 40px/52px Montserrat;
+        }
+    }
+
+    .info {
+        margin-top: 100px;
+        display: flex;
+
+        .col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .col-auto {
+            display: flex;
+            flex-direction: column;
+        }
+
+        span {
+            font: normal normal normal 15px/24px SUIT;
+        }
+    }
+}
+
+.btn-season {
+    background-color: #FE5A33;
+    border: 0;
+    border-radius: 30px;
+    padding: 15px 20px;
+
+    > span {
+        padding: 0px 15px;
+        font: normal normal normal 20px/25px Montserrat;
+        width: 145px;
+        // transition: font-weight 0.3s;
+    }
+
+    .btn-circle {
+        margin-left: 10px;
+        width: 30px;
+        height: 30px;
+        border-radius: 999px;
+        background-color: black;
+        color: #FE5A33;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        // transition: background-color 0.3s ease-in-out;
+
+        i {
+            font-size: 20px;
+        }
+    }
+}
+
+.btn-season:hover > span {
+    color: white;
+    font-weight: bold;
+}
+
+.btn-season:hover .btn-circle {
+    background-color: white;
+}
+
+.btn:active {
+    color: white;
+    background-color: #FE5A33;
+}

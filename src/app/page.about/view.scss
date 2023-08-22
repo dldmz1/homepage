@@ -1,0 +1,104 @@
+* {
+    max-width: 1760px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 598px;
+    background-image: linear-gradient(108deg, rgba(0, 0, 0, 0.5), transparent), url('/assets/season/about.png');
+
+    h2 {
+        font: normal normal bold 60px/75px Montserrat;
+        margin-bottom: 25px;
+    }
+
+    span {
+        font: normal normal 400 20px/28px SUIT;
+    }
+}
+
+.content {
+    height: auto;
+    margin-top: -60px;
+}
+
+// History
+.history {
+    border-top: 1px solid #9799A6;
+    padding-top: 50px;
+
+    .row {
+        margin-bottom: 100px;
+    }
+
+    .list {
+        display: flex;
+        align-items: center;
+
+        padding: 40px 0px;
+        border-bottom: 1px solid #9799A6;
+
+        h3 {
+            color: #9799A6;
+            font: normal normal bold 24px Montserrat;
+        }
+
+        span {
+            color: #2B2C2E;
+            font: normal normal 400 24px Montserrat;
+        }
+    }
+}
+
+// Team
+.team {
+    margin-bottom: 60px;
+
+    .title {
+        font: normal normal bold 24px/30px SUIT;
+        margin-right: 24px;
+    }
+
+    .detail {
+        font: normal normal normal 16px/20px SUIT;
+        color: #72787F;
+    }
+
+    .row {
+        margin-top: 24px;
+        border-top: 1px solid #C9CDD2;
+
+        .profile {
+            margin-top: 48px;
+            margin-left: 0px;
+            margin-right: 28px;
+            width: 296px;
+
+            display: flex;
+            flex-direction: column;
+
+            .image {
+                width: 296px;
+                height: 296px;
+                border-radius: 10px;
+                // background-color: #F8EEED;
+            }
+
+            .name {
+                margin-top: 24px;
+                margin-left: 0px;
+                font: normal normal bold 24px/30px SUIT;
+            }
+
+            .position {
+                margin-left: 0px;
+                font: normal normal normal 16px/20px SUIT;
+            }
+
+            .email {
+                margin-left: 0px;
+                font: normal normal normal 16px/20px SUIT;
+            }
+        }
+    }
+}

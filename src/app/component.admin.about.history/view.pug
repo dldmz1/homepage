@@ -1,0 +1,48 @@
+.card
+    .card-header
+        .col-auto
+            button.btn(*ngIf="mode === 1", (click)="tab(0)", style="width: 40px")
+                i.fa-solid.fa-arrow-left
+        .col.ml-4
+            h2.mb-0.py-2 History
+        .col-auto(*ngIf="mode === 0")
+            button.btn.btn-season((click)="create()")
+                i.fa-solid.fa-plus
+                span.ml-2 추가
+        .col-auto(*ngIf="list.id")
+            button.btn.btn-outline-danger((click)="remove()")
+                i.fa-solid.fa-trash
+                span.ml-2 삭제
+
+    #table
+        .table-responsive
+            table.table.table-vcenter.table-hover
+                thead
+                    tr
+                        th(width="10%") 연도
+                        th(width="10%") 월
+                        th 내용
+                        th.w-1
+                tbody
+                    tr.cursor-pointer(*ngFor="let item of history; let i = index;", (click)="edit(i)")
+                        td {{item.year}}
+                        td {{item.month}}월
+                        td {{item.content}}
+                        td
+                            button.btn((click)="edit(i)") 수정
+        .my-3
+            wiz-portal-season-pagenation([current]="page.current", [start]="page.start", [end]="page.end", (pageMove)="move($event)")
+
+    #edit
+        .edit-form
+            .form-group.row
+                label.col-sm-2.form-label 날짜
+                .col-sm-10
+                    input#yyyy-mm(type="month", min="2021-01", [(ngModel)]="list.ym")
+            .form-group.row(style="border-bottom: 1px solid #E3E3E3;")
+                label.col-sm-2.form-label 내용
+                .col-sm-10
+                    textarea.form-control([(ngModel)]="list.content", placeholder="내용을 입력하세요")
+        .card-footer.d-flex.flex-row-reverse
+            button.btn.btn-season((click)="save()")
+                span 저장

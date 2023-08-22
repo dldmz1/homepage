@@ -1,0 +1,19 @@
+{
+    "mode": "layout",
+    "id": "layout.season.admin",
+    "title": "season-admin",
+    "namespace": "season.admin",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "layout.season.admin",
+        "name": "LayoutSeasonAdminComponent",
+        "path": "./layout.season.admin/layout.season.admin.component"
+    },
+    "ng": {
+        "selector": "wiz-layout-season-admin",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-layout-season-admin()"
+}

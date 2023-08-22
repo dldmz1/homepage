@@ -1,0 +1,69 @@
+aside.navbar.navbar-vertical.navbar-expand-lg.navbar-side
+    .navbar-brand-container
+        button.navbar-toggler(type="button", (click)="isMenuCollapsed = !isMenuCollapsed")
+            span.navbar-toggler-icon
+
+        a.navbar-brand.p-0.m-0(routerLink='/admin', (click)="isMenuCollapsed = !isMenuCollapsed")
+            .text-center
+                img.m-0(src='/assets/season/logo-black.svg')
+
+    .collapse.navbar-collapse([ngbCollapse]="isMenuCollapsed")
+        // .user-profile(*ngIf="service.auth.status")
+        .user-profile
+            .card
+                .card-body
+                    .userinfo
+                        .name 정인
+                        .uclass 관리자
+                        .mail jeongin@season.co.kr
+                .card-footer
+                    .clicks
+                        a.click(href='/auth/logout') 로그아웃
+                        a.click(routerLink='/mypage', (click)="isMenuCollapsed = !isMenuCollapsed") 마이페이지
+            
+        ul.navbar-nav
+            ng-container
+                li.nav-item.dropdown([ngClass]="{'active': menuActive('/admin/about')}")
+                    .d-flex
+                        a.nav-link(routerLink='/admin/about/history', (click)="isMenuCollapsed = !isMenuCollapsed")
+                            span.nav-link-title About
+
+                    ul.dropdown-menu
+                        li
+                            a.dropdown-item(routerLink='/admin/about/history', routerLinkActive="active", (click)="isMenuCollapsed = !isMenuCollapsed")
+                                span History
+                        li
+                            a.dropdown-item(routerLink='/admin/about/member', routerLinkActive="active", (click)="isMenuCollapsed = !isMenuCollapsed")
+                                span Member
+                
+                li.nav-item.dropdown([ngClass]="{'active': menuActive('/admin/news')}")
+                    .d-flex
+                        a.nav-link(routerLink='/admin/news/home', (click)="isMenuCollapsed = !isMenuCollapsed")
+                            span.nav-link-title News
+
+                    ul.dropdown-menu
+                        li
+                            a.dropdown-item(routerLink='/admin/news/notice', routerLinkActive="active", (click)="isMenuCollapsed = !isMenuCollapsed")
+                                span 공지사항
+                        li
+                            a.dropdown-item(routerLink='/admin/news/communication', routerLinkActive="active", (click)="isMenuCollapsed = !isMenuCollapsed")
+                                span 커뮤니케이션
+                        li
+                            a.dropdown-item(routerLink='/admin/news/press', routerLinkActive="active", (click)="isMenuCollapsed = !isMenuCollapsed")
+                                span 보도자료
+
+                li.nav-item([ngClass]="{'active': menuActive('/admin/career')}")
+                    .d-flex
+                        a.nav-link(routerLink='/admin/career', (click)="isMenuCollapsed = !isMenuCollapsed")
+                            span.nav-link-title Career
+
+                li.nav-item([ngClass]="{'active': menuActive('/admin/contact')}")
+                    .d-flex
+                        a.nav-link(routerLink='/admin/contact', (click)="isMenuCollapsed = !isMenuCollapsed")
+                            span.nav-link-title Contact
+
+            ng-container
+                li.nav-item([ngClass]="{'active': menuActive('/admin/setting')}")
+                    .d-flex
+                        a.nav-link(routerLink='/admin/setting', (click)="isMenuCollapsed = !isMenuCollapsed")
+                            span.nav-link-title Setting

@@ -1,0 +1,18 @@
+nav.season-nav
+    .col
+        .logo(routerLink="/")
+            img(src="/assets/season/logo-black.svg", height="30")
+    .col
+        .d-flex
+            .col(routerLink="/about")
+                .menu([ngClass]="menu === 1 ? 'highlight' : ''")
+                    h3.m-0 About
+            .col(routerLink="/solutions/dizest")
+                .menu([ngClass]="menu === 2 ? 'highlight' : ''")
+                    h3.m-0 Solutions
+            .col(routerLink="/news")
+                .menu([ngClass]="menu === 3 ? 'highlight' : ''")
+                    h3.m-0 News
+            .col(routerLink="/career")
+                .menu([ngClass]="menu === 4 ? 'highlight' : ''")
+                    h3.m-0 Career

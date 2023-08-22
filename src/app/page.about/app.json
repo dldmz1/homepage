@@ -1,0 +1,20 @@
+{
+    "mode": "page",
+    "id": "page.about",
+    "title": "/about",
+    "namespace": "about",
+    "viewuri": "/about",
+    "category": "",
+    "layout": "layout.season",
+    "ng.build": {
+        "id": "page.about",
+        "name": "PageAboutComponent",
+        "path": "./page.about/page.about.component"
+    },
+    "ng": {
+        "selector": "wiz-page-about",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-about()"
+}

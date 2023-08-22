@@ -1,0 +1,34 @@
+.season-page
+    .header
+        h2 사람을 돕는 기술, 세상을 이끄는 변화
+        span 우리는 끊임없는 기술적 혁신을 추구하며, 사람들의 삶을 더욱 편리하고 풍요롭게 만들어,
+        br
+        span 세상을 이끄는 변화를 만들어냅니다.
+
+    .content.gray
+        h2.mb-3 History
+        .history
+            .row(*ngFor="let item of history")
+                .col(style="max-width: 430px;")
+                    h2.mb-0 {{item.year}}
+                .col
+                    .list(*ngFor="let data of item.list;")
+                        .col(style="max-width: 160px;")
+                            h3 {{data.month}}
+                        .col
+                            span {{data.content}}
+    
+    .content.pb-3
+        h2 Team
+        .team(*ngFor="let item of team;")
+            span.title {{item.title}}
+            span.detail {{item.detail}}
+            .row
+                .profile(*ngFor="let data of item.member;")
+                    .image
+                        img(src=`{{data.img}}`)
+                    span.mb-1.name {{data.name}}
+                    span.mb-1.position {{data.position}}
+                    span.mb-1.email {{data.email}}
+
+    wiz-component-footer()

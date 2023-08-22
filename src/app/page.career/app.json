@@ -1,0 +1,20 @@
+{
+    "mode": "page",
+    "id": "page.career",
+    "title": "/career",
+    "namespace": "career",
+    "viewuri": "/career",
+    "category": "",
+    "layout": "layout.season",
+    "ng.build": {
+        "id": "page.career",
+        "name": "PageCareerComponent",
+        "path": "./page.career/page.career.component"
+    },
+    "ng": {
+        "selector": "wiz-page-career",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-career()"
+}

@@ -1,0 +1,20 @@
+{
+    "mode": "page",
+    "id": "page.admin",
+    "title": "/admin",
+    "namespace": "admin",
+    "viewuri": "/admin/:main?/:sub?",
+    "category": "",
+    "layout": "layout.season.admin",
+    "ng.build": {
+        "id": "page.admin",
+        "name": "PageAdminComponent",
+        "path": "./page.admin/page.admin.component"
+    },
+    "ng": {
+        "selector": "wiz-page-admin",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-admin()"
+}

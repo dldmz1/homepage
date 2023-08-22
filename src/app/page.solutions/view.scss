@@ -1,0 +1,241 @@
+.header {
+    height: 571px;
+    background-image: linear-gradient(108deg, rgba(0, 0, 0, 0.5), transparent), url('/assets/season/solutions.png');
+
+    h2 {
+        font: normal normal bold 60px/75px Montserrat;
+    }
+
+    span {
+        font: normal normal 400 20px/30px SUIT;
+    }
+}
+
+.content {
+    margin-top: -50px;
+    height: 100%;
+}
+
+// menu card
+.menu {
+    display: flex;
+
+    .col {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+
+        margin: 0px 15px;
+        border-bottom: 1px solid #707070;
+
+        h3 {
+            font: normal normal 400 30px/75px Montserrat;
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+
+        button {
+            margin-right: 0px;
+        }
+
+        .btn-sol {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 999px;
+            border: 1px solid #F75933;
+
+            background: linear-gradient(to right, #F75933 50%, transparent 50%);
+            background-size: 200% 100%;
+            background-position: right;
+            transition: background-position 0.5s ease;
+
+            i {
+                font-size: 25px;
+            }
+        }
+    }
+
+    .col:hover {
+        border-bottom: 3px solid #000000;
+
+        h3 {
+            color: #F75933;
+            font-weight: bold;
+        }
+
+        .btn-sol {
+            background-position: left;
+
+            i {
+                color: white;
+            }
+        }
+    }
+
+    .on {
+        border-bottom: 3px solid #000000;
+
+        h3 {
+            color: #F75933;
+            font-weight: bold;
+        }
+
+        .btn-sol {
+            background-color: #F75933;
+
+            i {
+                color: white;
+            }
+        }
+    }
+}
+
+// main card
+.info {
+    display: flex;
+    color: white;
+    height: 25%;
+
+    h2 {
+        font: normal normal bold 113px Montserrat;
+        margin-bottom: 0px;
+        cursor: pointer;
+    }
+
+    h3 {
+        font: normal normal bold 30px/30px SUIT;
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+
+    span {
+        color: #e9e8ee;
+        font: normal normal normal 16px/27px SUIT;
+    }
+}
+
+.box {
+    width: 100%;
+    height: 80%;
+    border-radius: 20px;
+    background: #E9E8EE;
+}
+
+// innovation card
+.innovation {
+    display: flex;
+    height: 100%;
+
+    .col {
+        margin-right: 30px;
+        padding: 30px;
+        height: 85%;
+        border-radius: 20px;
+
+        display: flex;
+        flex-direction: column;
+        color: white;
+
+        h3 {
+            text-align: center;
+            font: normal normal bold 32px/40px SUIT;
+        }
+
+        .index {
+            margin-bottom: 10px;
+        }
+
+        img {
+            margin: 40px auto;
+        }
+
+        span {
+            text-align: center;
+            font: normal normal normal 16px/25px SUIT;
+        }
+
+        .text-gray {
+            color: #9799A6;
+        }
+
+        .text-black {
+            color: black;
+        }
+    }
+
+    .one {
+        background-color: white;
+    }
+
+    .two {
+        background-color: #9799A6;
+    }
+
+    .three {
+        background-color: #494A52;
+    }
+
+    .four {
+        background-color: #2E2F34;
+    }
+}
+
+// case card
+.cases {
+    border-top: 1px solid #707070;
+    display: flex;
+    height: 90%;
+
+    .col-auto {
+        display: flex;
+        flex-direction: column;
+        width: 350px;
+
+        span {
+            margin: 10px auto;
+            padding: 10px 0px;
+            font: normal normal 500 20px/25px SUIT;
+            color: #494A52;
+        }
+
+        .focus {
+            font: normal normal bold 20px/25px SUIT;
+            border-left: 4px solid #F75933;
+            padding-left: 26px;
+        }
+    }
+
+    .col {
+        display: flex;
+        border-left: 1px solid #707070;
+        padding: 45px;
+
+        .capture {
+            width: 500px;
+            height: 100%;
+            border-radius: 30px;
+            background-color: #494A52;
+        }
+
+        .detail {
+            margin: auto;
+            margin-left: 70px;
+            max-width: 600px;
+
+            h3 {
+                font: normal normal bold 24px/30px SUIT;
+                color: #F75933;
+            }
+
+            h2 {
+                font: normal normal bold 45px/56px SUIT;
+            }
+
+            span {
+                font: normal normal normal 16px/25px SUIT;
+            }
+        }
+    }
+}

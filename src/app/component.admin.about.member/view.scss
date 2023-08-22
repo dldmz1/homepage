@@ -1,0 +1,48 @@
+.card-header h2 {
+    font: normal normal bold 30px Montserrat;
+}
+
+table {
+    text-align: center;
+}
+
+#edit {
+    display: none;
+}
+
+.form-group {
+    padding: 15px 0px;
+    border-top: 1px solid #E3E3E3;
+
+    .form-label {
+        display: flex;
+        align-items: center;
+        font: normal normal bold 14px/18px SUIT;
+        margin-bottom: 0px;
+    }
+
+    .form-selectgroup-label {
+        padding: 7px 16px;
+    }
+}
+
+.form-selectgroup-input:checked+.form-selectgroup-label {
+    z-index: 1;
+    color: #FE5A33;
+    background: rgba(#FE5A33, .04);
+    border-color: #FE5A33;
+}
+
+.edit-form {
+    padding: 20px;
+}
+
+.btn-season {
+    background-color: #FE5A33;
+    color: white;
+
+    &:active {
+        border: 1px solid #FE5A33;
+        color: #FE5A33;
+    }
+}

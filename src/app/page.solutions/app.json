@@ -1,0 +1,20 @@
+{
+    "mode": "page",
+    "id": "page.solutions",
+    "title": "/solutions",
+    "namespace": "solutions",
+    "viewuri": "/solutions/:tab?",
+    "category": "",
+    "layout": "layout.season",
+    "ng.build": {
+        "id": "page.solutions",
+        "name": "PageSolutionsComponent",
+        "path": "./page.solutions/page.solutions.component"
+    },
+    "ng": {
+        "selector": "wiz-page-solutions",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-page-solutions()"
+}

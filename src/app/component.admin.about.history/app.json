@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.admin.about.history",
+    "title": "/admin/about/history",
+    "namespace": "admin.about.history",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.admin.about.history",
+        "name": "ComponentAdminAboutHistoryComponent",
+        "path": "./component.admin.about.history/component.admin.about.history.component"
+    },
+    "ng": {
+        "selector": "wiz-component-admin-about-history",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-admin-about-history()"
+}

@@ -1,0 +1,8 @@
+ng-container(*ngIf="main == 'about'")
+    ng-container(*ngIf="sub == 'history'")
+        wiz-component-admin-about-history()
+    ng-container(*ngIf="sub == 'member'")
+        wiz-component-admin-about-member()
+
+ng-container(*ngIf="main == 'career'")
+    wiz-component-admin-career()

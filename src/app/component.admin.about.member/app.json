@@ -1,0 +1,19 @@
+{
+    "mode": "component",
+    "id": "component.admin.about.member",
+    "title": "/admin/about/member",
+    "namespace": "admin.about.member",
+    "viewuri": "",
+    "category": "",
+    "ng.build": {
+        "id": "component.admin.about.member",
+        "name": "ComponentAdminAboutMemberComponent",
+        "path": "./component.admin.about.member/component.admin.about.member.component"
+    },
+    "ng": {
+        "selector": "wiz-component-admin-about-member",
+        "inputs": [],
+        "outputs": []
+    },
+    "template": "wiz-component-admin-about-member()"
+}

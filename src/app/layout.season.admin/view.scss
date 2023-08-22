@@ -1,0 +1,17 @@
+.wiz-page {
+    display: flex;
+}
+
+.wiz-content {
+    padding: 96px 70px;
+}
+
+.wiz-view {
+    overflow: hidden !important;
+}
+
+@media(max-width:768px) {
+    .wiz-page {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,104 @@
+.card
+    .card-header
+        .col-auto
+            button.btn(*ngIf="mode === 1", (click)="tab(0)", style="width: 40px")
+                i.fa-solid.fa-arrow-left
+        .col.ml-4
+            h2.mb-0.py-2 Job Posting
+        .col-auto(*ngIf="mode === 0")
+            button.btn.btn-season((click)="create()")
+                i.fa-solid.fa-plus
+                span.ml-2 추가
+        .col-auto(*ngIf="list.id")
+            button.btn.btn-outline-danger((click)="remove()")
+                i.fa-solid.fa-trash
+                span.ml-2 삭제
+                
+    #table
+        .table-responsive
+            table.table.table-vcenter.table-hover
+                thead
+                    tr
+                        th 팀 분류
+                        th 직업 분류
+                        th 내용
+                        th 상태
+                        th.w-1
+                tbody
+                    tr.cursor-pointer(*ngFor="let item of post; let i = index;", (click)="edit(i)")
+                        td {{item.team}}
+                        td {{item.job}}
+                        td {{item.content}}
+                        td {{item.status}}
+                        td
+                            button.btn((click)="edit(i)") 수정
+        .my-3
+            wiz-portal-season-pagenation([current]="page.current", [start]="page.start", [end]="page.end", (pageMove)="move($event)")
+
+    #edit
+        .edit-form
+            .form-group.row
+                label.col-sm-2.form-label 팀 분류
+                .col-sm-10
+                    select.form-select([(ngModel)]="list.team")
+                        option(value="개발팀") 개발팀
+                        option(value="연구팀") 연구팀
+                        option(value="기획팀") 기획팀
+                        option(value="경영지원팀") 경영지원팀
+            .form-group.row
+                label.col-sm-2.form-label 직무 분류
+                .col-sm-10
+                    input.form-control(
+                        type="text",
+                        [(ngModel)]="list.job",
+                        placeholder="직업을 입력하세요"
+                    ) 
+            .form-group.row
+                label.col-sm-2.form-label 내용
+                .col-sm-10
+                    textarea.form-control([(ngModel)]="list.content", placeholder="내용을 입력하세요")
+            .form-group.row
+                label.col-sm-2.form-label 상태
+                .col-sm-10
+                    .form-selectgroup
+                        label.form-selectgroup-item
+                            input.form-selectgroup-input(
+                                type="radio",
+                                name="icons",
+                                value=0,
+                                [(ngModel)]="list.mode"
+                            )
+                            span.form-selectgroup-label
+                                i.fa-regular.fa-square.mr-2
+                                | 없음
+                        label.form-selectgroup-item
+                            input.form-selectgroup-input(
+                                type="radio",
+                                name="icons",
+                                value=1,
+                                [(ngModel)]="list.mode"
+                            )
+                            span.form-selectgroup-label
+                                i.fa-solid.fa-bullseye.mr-2
+                                | 집중 채용
+                        label.form-selectgroup-item
+                            input.form-selectgroup-input(
+                                type="radio",
+                                name="icons",
+                                value=2,
+                                [(ngModel)]="list.mode"
+                            )
+                            span.form-selectgroup-label
+                                i.fa-solid.fa-infinity.mr-2
+                                | 항시 채용
+            .form-group.row(style="border-bottom: 1px solid #E3E3E3;")
+                label.col-sm-2.form-label 링크
+                .col-sm-10
+                    input.form-control(
+                        type="text",
+                        [(ngModel)]="list.url",
+                        placeholder="https://"
+                    )
+        .card-footer.d-flex.flex-row-reverse
+            button.btn.btn-season((click)="save()")
+                span 저장

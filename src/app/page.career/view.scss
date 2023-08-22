@@ -1,0 +1,213 @@
+* {
+    max-width: 1760px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 611px;
+    background-image: linear-gradient(108deg, rgba(0, 0, 0, 0.5), transparent), url('/assets/season/career.png');
+
+    h2 {
+        font: normal normal bold 76px/93px Montserrat;
+    }
+
+    span {
+        font: normal normal 400 24px/28px SUIT;
+    }
+}
+
+.content {
+    margin-top: -60px;
+    height: auto;
+}
+
+// Ideal talent
+.slider {
+    display: flex;
+    overflow-x: auto;
+}
+
+.slider::-webkit-scrollbar {
+    display: none;
+}
+
+.talent {
+    flex: 0 0 387px;
+    height: 534px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2 {
+            font: normal normal bold 28px/35px SUIT;
+            margin-bottom: 8px;
+        }
+
+        span {
+            margin-top: 20px;
+            font: normal normal normal 16px/20px SUIT;
+            color: #494A52;
+            text-align: center;
+        }
+    }
+
+    .img {
+        padding: 36px;
+        background-color: #E9E8EE;
+        border-radius: 20px;
+    }
+}
+
+// Benefit
+.benefit {
+    width: 388px;
+    height: 100%;
+    padding: 30px;
+    border-radius: 10px;
+
+    h4 {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        font: normal normal bold 20px/25px SUIT;
+    }
+
+    span {
+        color: #494A52;
+        font: normal normal normal 16px/25px SUIT;
+    }
+}
+
+// Recruitment process
+.step {
+    width: 310px;
+
+    .circle {
+        width: 310px;
+        height: 310px;
+        border-radius: 155px;
+        background-color: white;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        h3 {
+            margin-bottom: 8px;
+            font: normal normal bold 28px/35px SUIT;
+        }
+
+        span {
+            font: normal normal normal 28px/35px SUIT;
+            width: 270px;
+        }
+    }
+
+    .light-gray {
+        background-color: #9799A6;
+    }
+
+    .orange {
+        background-color: #F75933;
+        color: white;
+    }
+
+    .dark-gray {
+        background-color: #494a52;
+        color: white;
+    }
+
+    .detail {
+        margin-top: 50px;
+        font: normal normal normal 18px/25px SUIT;
+        text-align: center;
+    }
+}
+
+.next {
+    padding: 50px;
+    display: flex;
+    align-items: center;
+
+    i {
+        font-size: 34px;
+        margin-bottom: 100px;
+    }
+}
+
+// Job Posting
+.post {
+    border: 1px solid #D5D5D5;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 15px 0px;
+    background-color: white;
+    cursor: pointer;
+
+    button {
+        margin: 10px 0px;
+        margin-left: 15px;
+        border-radius: 15px;
+        border: none;
+        height: 30px;
+        font: normal normal normal 15px/30px Montserrat;
+    }
+
+    .always {
+        background-color: #FDDED6;
+    }
+
+    .focus {
+        background-color: #FA9B85;
+    }
+
+    h3 {
+        font: normal normal bold 28px/50px Montserrat;
+    }
+
+    span {
+        font: normal normal normal 16px/30px Montserrat;
+    }
+}
+
+.post:hover {
+    border: 2px solid #F75933;
+    background-color: #FFF2ED;
+}
+
+.btn-post {
+    border: 1px solid black;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font: normal normal normal 16px/25px SUIT;
+    margin: 0px 5px;
+
+    span {
+        margin-right: 10px;
+    }
+}
+
+.opt {
+    color: #72787F;
+    border: 1px solid #72787F;
+
+    &:hover {
+        color: #FF5933;
+        border: 1px solid #FF5933;
+        background-color: #FFF2ED;
+    }
+}
+
+.blank {
+    display: flex;
+    padding: 150px;
+    font: normal normal normal 20px/25px SUIT;
+}

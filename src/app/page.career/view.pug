@@ -1,0 +1,86 @@
+.season-page
+    .header
+        h2.mb-3 Career
+        span Season과 함께 성장할 인재를 모집합니다.
+
+    .content.gray
+        h2 Ideal talent
+        .slider
+            .talent(
+                *ngFor="let item of talent",
+                [style.margin-right.px]="item.index == 6 ? 0 : 30"
+            )
+                .text.mb-auto
+                    h2(style="color: #9799A6") 0{{item.index}}
+                    h2 {{item.title}}
+                    h2 ({{item.subtitle}})
+                    span {{item.detail}}
+                .img
+                    img(src=`/assets/season/career/{{item.svg}}`, height="128")
+
+    .content
+        h2.mb-5 Benefit
+        .row
+            .benefit(*ngFor="let item of benefit")
+                img(src=`/assets/season/career/{{item.svg}}`, height="60")
+                h4 {{item.title}}
+                span {{item.detail}}
+
+    .content.gray
+        h2 Recruitment process
+        .d-flex
+            .step
+                .circle
+                    h3 Step1
+                    span.text-center 지원서 접수
+                .detail
+                    span 채용 사이트 양식 & 자사 채용사이트를 통한 지원서 접수를 합니다.
+            .next
+                i.fa-solid.fa-chevron-right
+            .step
+                .circle.light-gray
+                    h3 Step2
+                    span.text-center(style="width: 210px;") 서류 및 포트폴리오 제출
+                .detail
+                    span 서류 심사 후 결과 개별통보합니다.
+            .next
+                i.fa-solid.fa-chevron-right
+            .step
+                .circle.orange
+                    h3 Step3
+                    span.text-center 인터뷰
+                .detail
+                    span 인터뷰는 제출된 서류 및 포트폴리오 바탕으로 진행합니다.
+            .next
+                i.fa-solid.fa-chevron-right
+            .step
+                .circle.dark-gray
+                    h3 Step4
+                    span.text-center 입사 확정
+                .detail
+                    span 최종 결과는 개별통보 드립니다.
+    
+    .content
+        .row
+            .col
+                h2.mb-5 Job posting
+            .col-auto.d-flex.align-items-center
+                button.btn.btn-post.opt((click)="select()") 전체
+                button.btn.btn-post.opt((click)="select('개발팀')") 개발팀
+                button.btn.btn-post.opt((click)="select('기획팀')") 기획팀
+                button.btn.btn-post.opt((click)="select('연구팀')") AI융합기술연구팀
+                button.btn.btn-post.opt((click)="select('경영지원팀')") 경영지원팀
+
+        .post(*ngFor="let item of post;", (click)="href(item.url)")
+            .title
+                h3 {{item.title}}
+                    button.btn.btn-status(
+                        *ngIf="item.mode !== 0",
+                        [ngClass]="{'focus': item.mode == 1, 'always': item.mode == 2}"
+                    ) {{item.status}}
+            span {{item.content}}
+        
+        .blank(*ngIf="post.length === 0")
+            span 해당 팀에 대한 채용 공고가 없습니다.
+
+    wiz-component-footer()

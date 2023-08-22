@@ -1,0 +1,45 @@
+* {
+    max-width: 1760px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 598px;
+    background-image: linear-gradient(108deg, rgba(0, 0, 0, 0.5), transparent), url('/assets/season/news.png');
+
+    h2 {
+        font: normal normal bold 76px/93px Montserrat;
+    }
+
+    span {
+        font: normal normal 400 24px/28px SUIT;
+    }
+}
+
+.content {
+    margin-top: -60px;
+}
+
+.btn-news {
+    background: linear-gradient(to left, transparent 50% , #F75933 50%);
+    background-size: 200% 100%;
+    background-position: left;
+    transition: background-position 0.5s ease;
+    border-radius: 30px;
+    border: 1px solid #F75933;
+    padding: 15px 30px;
+    color: white;
+
+    span {
+        font: normal normal normal 14px Montserrat;
+    }
+
+    i {
+        font-size: 16px;
+    }
+}
+
+.btn-news:hover {
+    background-position: right;
+    color: #F75933;
+}
